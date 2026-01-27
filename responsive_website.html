@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    background-color: #0f172a;
+    color: #ffffff;
+}
+
+/* Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #020617;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    color: #cbd5f5;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+/* Hero */
+.hero {
+    min-height: 80vh;
+    background: rgb(0, 170, 255);
+    color: #020617;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 500px;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.btn {
+    padding: 12px 25px;
+    background-color: #020617;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+}
+
+/* Features */
+.features {
+    display: flex;
+    gap: 20px;
+    padding: 60px 40px;
+}
+
+.feature-card {
+    background-color: #020617;
+    padding: 25px;
+    border-radius: 10px;
+    flex: 1;
+    transition: transform 0.3s ease;
+}
+
+/* Showcase */
+.showcase {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.showcase h2 {
+    margin-bottom: 30px;
+}
+
+.work-grid {
+    display: flex;
+    gap: 20px;
+}
+
+.work {
+    flex: 1;
+    height: 150px;
+    background: rgb(0, 170, 255);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #020617;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #020617;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .features,
+    .work-grid {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+
+    <section class="hero">
+        <h1>Manpreet Singh</h1>
+        <p>A full-stack web developer and java learner</p>
+        <a href="#" class="btn">Explore More</a>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <h3>Clean Design</h3>
+            <p>Minimal layouts with modern UI principles.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Responsive</h3>
+            <p>Works smoothly on mobile, tablet, and desktop.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Fast Load</h3>
+            <p>Lightweight code without unnecessary libraries.</p>
+        </div>
+    </section>
+
+    <section class="showcase">
+        <h2>Recent Work</h2>
+        <div class="work-grid">
+            <div class="work">Portfolio Website</div>
+            <div class="work">Tribal area tracking website</div>
+            <div class="work">Aquatic system analytical website</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Built by Manpreet Singh.</p>
+    </footer>
+
+</body>
+</html>
