@@ -2,190 +2,240 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
+    <title>Job Search Portal</title>
+    <link rel="stylesheet" href="style.css">
 
     <style>
-        *{
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-        body{
-            background-color: #f4f4f4;
-            padding: 20px;
-        }
+body {
+    background-color: #f4f6f8;
+    color: #333;
+}
 
-        #box{
-            max-width: 900px;
-            background-color: rgb(122, 138, 144);
-            margin: auto;
-            padding-bottom: 30px;
-        }
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        .header{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 50px;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
 
-        .photo{
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
+header nav a:hover {
+    text-decoration: underline;
+}
 
-        hr{
-            margin: 10px 0;
-        }
+.search-section {
+    background-color: white;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
 
-        .social{
-            display: flex;
-            justify-content: space-between;
-            padding: 0 50px;
-            flex-wrap: wrap;
-            gap: 10px;
-            font-size: 14px;
-        }
+.search-section input {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
 
-        .section{
-            padding: 20px 50px;
-        }
+.search-section button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
-        table{
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-            background-color: #ffffff;
-        }
+.search-section button:hover {
+    background-color: #2980b9;
+}
 
-        th, td{
-            border: 2px solid black;
-            padding: 10px;
-            text-align: center;
-        }
+.jobs {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
 
-        .table-wrapper{
-            overflow-x: auto;
-        }
+.job-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
 
-        h2{
-            margin-bottom: 10px;
-        }
+.job-card h2 {
+    margin-bottom: 8px;
+}
 
-        h3{
-            margin-top: 10px;
-        }
+.company {
+    font-weight: bold;
+    color: #555;
+}
 
-        p{
-            margin-top: 5px;
-        }
+.location {
+    color: #777;
+    margin-bottom: 10px;
+}
 
-        /* -------- Responsive -------- */
-        @media (max-width: 600px){
-            .header{
-                flex-direction: column;
-                align-items: flex-start;
-            }
+.description {
+    margin-bottom: 15px;
+}
 
-            .social{
-                flex-direction: column;
-                gap: 5px;
-            }
+.job-card button {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
-            .section{
-                padding: 20px;
-            }
+.job-card button:hover {
+    background-color: #219150;
+}
 
-            .header, .social{
-                padding-left: 20px;
-                padding-right: 20px;
-            }
-        }
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #2c3e50;
+    color: white;
+    margin-top: 40px;
+}
+
     </style>
 </head>
 <body>
 
-<div id="box">
+    <header>
+        <h1>JobFinder</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Jobs</a>
+            <a href="#">Companies</a>
+            <a href="#">Login</a>
+        </nav>
+    </header>
 
-    <div class="header">
-        <div>
-            <h2>Manpreet Singh</h2>
-            <div>Ludhiana Road</div>
-        </div>
-        <img class="photo" src="data:image/jpeg;base64,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" alt="">
-    </div>
+    <section class="search-section">
+        <input type="text" placeholder="Job title or keyword">
+        <input type="text" placeholder="Location">
+        <button>Search</button>
+    </section>
 
-    <hr>
-
-    <div class="social">
-        <div>LinkedIn</div>
-        <div>Email</div>
-        <div>GitHub</div>
-    </div>
-
-    <hr>
-
-    <div class="section">
-        <h2>Qualification</h2>
-        <div class="table-wrapper">
-            <table>
-                <tr>
-                    <th>Class</th>
-                    <th>Institution</th>
-                    <th>Percentage</th>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td>CBSE</td>
-                    <td>99%</td>
-                </tr>
-                <tr>
-                    <td>12</td>
-                    <td>CBSE</td>
-                    <td>98%</td>
-                </tr>
-                <tr>
-                    <td>Graduation</td>
-                    <td>CSE</td>
-                    <td>9.2 CGPA</td>
-                </tr>
-            </table>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>Projects</h2>
-
-        <div>
-            <h3>BioLink</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <section class="jobs">
+        <div class="job-card">
+            <h2>Frontend Developer</h2>
+            <p class="company">Tech Solutions Inc.</p>
+            <p class="location">Remote</p>
+            <p class="description">
+                Looking for a skilled frontend developer with experience in HTML, CSS, and JavaScript.
+            </p>
+            <button>Apply Now</button>
         </div>
 
-        <div>
-            <h3>fdfsd</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="job-card">
+            <h2>Backend Developer</h2>
+            <p class="company">CodeWorks</p>
+            <p class="location">New York, USA</p>
+            <p class="description">
+                Seeking a backend developer experienced with APIs and databases.
+            </p>
+            <button>Apply Now</button>
         </div>
 
-        <div>
-            <h3>tyyrtey</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="job-card">
+            <h2>UI/UX Designer</h2>
+            <p class="company">Creative Studio</p>
+            <p class="location">London, UK</p>
+            <p class="description">
+                Design intuitive and beautiful user experiences for web and mobile.
+            </p>
+            <button>Apply Now</button>
         </div>
-    </div>
+    </section>
 
-    <div class="section">
-        <h2>Achievement</h2>
-        <p>2 Hackathon Winner</p>
-        <p>Participated in SIH Hackathon</p>
-    </div>
+    <section class="jobs">
+        <div class="job-card">
+            <h2>Frontend Developer</h2>
+            <p class="company">Tech Solutions Inc.</p>
+            <p class="location">Remote</p>
+            <p class="description">
+                Looking for a skilled frontend developer with experience in HTML, CSS, and JavaScript.
+            </p>
+            <button>Apply Now</button>
+        </div>
 
-</div>
+        <div class="job-card">
+            <h2>Backend Developer</h2>
+            <p class="company">CodeWorks</p>
+            <p class="location">New York, USA</p>
+            <p class="description">
+                Seeking a backend developer experienced with APIs and databases.
+            </p>
+            <button>Apply Now</button>
+        </div>
+
+        <div class="job-card">
+            <h2>UI/UX Designer</h2>
+            <p class="company">Creative Studio</p>
+            <p class="location">London, UK</p>
+            <p class="description">
+                Design intuitive and beautiful user experiences for web and mobile.
+            </p>
+            <button>Apply Now</button>
+        </div>
+    </section>
+    <section class="jobs">
+        <div class="job-card">
+            <h2>Frontend Developer</h2>
+            <p class="company">Tech Solutions Inc.</p>
+            <p class="location">Remote</p>
+            <p class="description">
+                Looking for a skilled frontend developer with experience in HTML, CSS, and JavaScript.
+            </p>
+            <button>Apply Now</button>
+        </div>
+
+        <div class="job-card">
+            <h2>Backend Developer</h2>
+            <p class="company">CodeWorks</p>
+            <p class="location">New York, USA</p>
+            <p class="description">
+                Seeking a backend developer experienced with APIs and databases.
+            </p>
+            <button>Apply Now</button>
+        </div>
+
+        <div class="job-card">
+            <h2>UI/UX Designer</h2>
+            <p class="company">Creative Studio</p>
+            <p class="location">London, UK</p>
+            <p class="description">
+                Design intuitive and beautiful user experiences for web and mobile.
+            </p>
+            <button>Apply Now</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>Created By Manpreet Singh</p>
+    </footer>
 
 </body>
 </html>
