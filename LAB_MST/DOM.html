@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        let change = () => {
+            let para = document.getElementById('para');
+            para.innerText = "Welcome to Javascript DOM Manipulation";
+            para.style.color = "blue";
+            para.style.fontSize = "24px";
+        }
+    </script>
+</head>
+<body>
+    <p id="para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi a aliquid, tempore voluptate aliquam enim molestiae placeat illum! Delectus numquam dignissimos pariatur explicabo cum deserunt provident accusantium accusamus dolorem corrupti.
+    </p>
+
+    <button onclick="change()">SUBMIT</button>
+</body>
+</html>
