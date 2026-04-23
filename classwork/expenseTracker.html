@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+</head>
+
+<script>
+    let putIntoList = () => {
+        let exp_name = document.getElementById("exp_name").value;
+        let exp_cat = document.getElementById("exp_cat").value;
+        let price = document.getElementById("price").value;
+
+        document.getElementById("list_exp_name").innerHTML = exp_name;
+        document.getElementById("list_exp_cat").innerHTML = exp_cat;
+        document.getElementById("list_price").innerHTML = price;
+
+    }
+</script>
+<body>
+    <div>
+        Expense Name: <input id="exp_name" type="text">
+        <br><br>
+        Category: 
+        <select name="" id="exp_cat">
+            <option value="shopping">shopping</option>
+            <option value="personal">personal</option>
+            <option value="travel">travel</option>
+            <option value="emergency">emergency</option>
+        </select>
+        <br><br>
+        Price <input id="price" type="number" placeholder="In INR">
+        <br><br>
+        <button onclick="putIntoList()">Submit</button>
+
+        <div>
+            <h2>LIST</h2>
+            <div style="display: flex;"><div style="width: 500px;" id="list_exp_name"></div> <div id="list_exp_cat" style="width: 500px;"> </div> <div id="list_price"></div> </div>
+        </div>
+    </div>
+</body>
+</html>
